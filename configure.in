@@ -80,7 +80,7 @@ dnl result of a previously run test - in our case, for setting an
 dnl automake variable based on the result of an autoconf test.  See
 dnl "Defining C Preprocessor Symbols" in the autoconf info docs.
 
-AC_CHECK_LIB(comedi, comedi_open)
+#AC_CHECK_LIB(comedi, comedi_open)
 AM_CONDITIONAL(COMEDI, test "$ac_cv_lib_comedi_comedi_open" = "yes")
 
 AC_SUBST(XOSCOPE)
