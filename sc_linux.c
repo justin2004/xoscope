@@ -32,7 +32,7 @@
 #endif
 
 #define ESDDEVICE "ESounD"
-#define SOUNDDEVICE "/dev/dsp"
+#define SOUNDDEVICE "/dev/stdin"
 
 static int snd = -2;		/* file descriptor for /dev/dsp */
 static int esd = -2;		/* file descriptor for ESD */
@@ -79,6 +79,7 @@ void esdsc_gtk_option_dialog() {}
 static void
 close_sound_card()
 {
+  return;
   if (snd >= 0) {
     close(snd);
     snd = -2;
